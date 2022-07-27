@@ -1,0 +1,18 @@
+<label for="fibonacci">
+  Fibonacci buckets:
+  <br />
+  <input
+    type="number"
+    formControlName="fibonacci"
+    name="fibonacci"
+    #fibonacciInput
+    autofocus
+    [value]=""
+  />
+  <button (click)="getNumber(fibonacciInput.value)">Calculate</button>
+</label>
+
+<h3>Result:</h3>
+<span>{{ fibonacciResult }}</span>
+
+<br /><br />

@@ -1,0 +1,13 @@
+<label for="textanalytisis">
+  Text analysis:
+  <br />
+  <textarea maxlength="150" #textInput></textarea>
+</label>
+
+<button (click)="getString(textInput.value)">Calculate</button>
+<h3>Result:</h3>
+
+<span *ngFor="let letter of countedLetters | keyvalue">
+  <span>{{ letter.key }}</span
+  >:<span>{{ letter.value }}</span>
+</span>
