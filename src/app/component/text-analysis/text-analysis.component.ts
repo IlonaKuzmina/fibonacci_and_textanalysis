@@ -7,13 +7,10 @@ import { Component } from '@angular/core';
 })
 export class TextAnalysisComponent {
   givenString!: string[];
-  countedLetters!: {[key:string]: number};
+  countedLetters!: { [key: string]: number };
 
   getString(givenString: string): void {
-    this.givenString = givenString
-      .toLocaleLowerCase()
-      .replace(/\s/g, '')
-      .split('');
+    this.givenString = givenString.toLocaleLowerCase().replace(/[^\w\s]/gi, '').split('');
     this.calculateLetters();
   }
 
@@ -31,5 +28,4 @@ export class TextAnalysisComponent {
 
     this.countedLetters = letterObj;
   }
-
 }

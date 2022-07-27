@@ -6,7 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./fibonacci.component.scss'],
 })
 export class FibonacciComponent {
-  @ViewChild('fibonacciInput ') fibonacciInput: ElementRef | undefined;
+  @ViewChild('fibonacciInput') fibonacciInput: ElementRef | undefined;
   givenNumber!: number;
   fibonacciResult!: number[];
   result: any;
@@ -19,7 +19,7 @@ export class FibonacciComponent {
 
   calculateFibonacci(): void {
     const fibSequence = [0, 1];
-    const firstFibNumberLength = fibSequence.length; 
+    const firstFibNumberLength = fibSequence.length;
 
     for (let i = 0; i < this.givenNumber - firstFibNumberLength; i++) {
       const nextFibNumber = fibSequence[i] + fibSequence[i + 1];

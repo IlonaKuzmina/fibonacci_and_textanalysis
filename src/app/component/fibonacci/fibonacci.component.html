@@ -7,12 +7,9 @@
     name="fibonacci"
     #fibonacciInput
     autofocus
-    [value]=""
   />
   <button (click)="getNumber(fibonacciInput.value)">Calculate</button>
 </label>
 
-<h3>Result:</h3>
-<span>{{ fibonacciResult }}</span>
-
-<br /><br />
+<h4>Result:</h4>
+<div class="fibonacci__result">{{ fibonacciResult }}</div>
