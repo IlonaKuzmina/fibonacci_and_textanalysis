@@ -9,7 +9,6 @@ export class FibonacciComponent {
   @ViewChild('fibonacciInput') fibonacciInput: ElementRef | undefined;
   givenNumber!: number;
   fibonacciResult!: number[];
-  result: any;
 
   getNumber(givenNumber: string): void {
     this.givenNumber = Number(givenNumber);
